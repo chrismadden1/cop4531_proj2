@@ -19,11 +19,9 @@ template < class P >
 void List<T>::Sort (P& comp)
 // merge sort: in place, stable, Theta(n log n)
 {
-  if (head_->next_ == tail_) return;         // empty list
-  if (head_->next_ == tail_->prev_) return;  // only one element
-
-  // size >= 2; at least one pass required
-  // isolate list without head and tail nodes
+  if (head_->next_ == tail_ || head_->next_ == tail_->prev_) 
+	  return;       
+  
   Link * first = head_->next_;
   first ->prev_ = 0;
   tail_->prev_->next_ = 0;
@@ -110,7 +108,7 @@ void List<T>::Sort (P& comp)
     // terminate the "new" last node; first is taken care of /* here */
     last->next_ = 0;
 
-    if (nmerges <= 1) // the two segments constituted the entire list
+    if (nmerges < 2) // the two segments constituted the entire list
     {
       // restore the head and tail structure
       last->next_ = tail_;
