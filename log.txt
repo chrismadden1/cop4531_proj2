@@ -8,8 +8,8 @@
               from website like geeksforgeeks and stackoverflow and looked at the different recursive and non recursive implementations 
               I now feel comfortable with starting the code.
               
-06/09/2019 -  I now have a working(for the most part) version of void List<T>::Sort (P& comp) working and just need to clean up a few things
-              mainly the things specified in the project details under "loose ends to tie up" which I should be able to finish soon
+06/09/2019 -  I now have a working(for the most part) version of void List<T>::Sort (P& comp) working and just need to clean up a few
+              things mainly the things specified in the project details under "loose ends to tie up" which I should be able to finish soon
               
 06/11/2019 -  Finished tying up all the loose ends and began testing and analyzing my algorithm for operational objectives 2&3.
               not completely sure about using 
@@ -25,7 +25,12 @@ but it seems to be working fine and shouldn't be necessary to rewrite what would
               below.
 
 
-Operational Objective 1:
+Operational Objective 2:
   Memory allocation plays a huge role in why we choose mergesort for linked list over other types of sorts that are faster/more
   efficient with things like vectors or arrays. Linked list nodes are not necessarily adjacent in memory which means things like 
   inserting something in the middle takes O(1) space and time which is great.
+  if our size is n, we would make log n amount of passes through the list and each time we combine 2 small lists into a larger 
+  sorted list, and when a pass only merges once, you know the entire thing is now sorted. Note there are still n items.
+  we get O(n log n) because we have n items iterated through log n times. This is pretty clearly demonstrated in my code.
+  
+ Operation Objective 3:
