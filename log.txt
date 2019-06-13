@@ -39,5 +39,97 @@ Operational Objective 2:
   the oppurtunity to have very poor locality of reference which makes it much harder and in turn slow for the memory paging 
   algorithms.
   
+  
+  
+  ////////////////////////////////TESTING/////////////////////////////////////////////////////
+  
+   Input file name: out10.txt
+            size: 10
+
+=================================================================================
+Comparison Sorts
+=================================================================================
+ algorithm              errors     comp_count                 usec            sec
+ ---------------        ------     ----------                 ----            ---
+ g_selection_sort            0             55                    2       0.000002
+ g_insertion_sort            0             27                    1       0.000001
+ g_quick_sort                0             23                    1       0.000001
+ g_quick_sort_opt            0             23                    2       0.000002
+ g_quick_sort_3w             0             40                    2       0.000002
+ g_quick_sort_3w_opt         0             22                    1       0.000001
+ g_merge_sort                0             24                    4       0.000004
+ g_merge_sort_opt            0             26                    1       0.000001
+ g_merge_sort_bu             0             25                    3       0.000003
+ List::Sort                  0             25                    5       0.000005
+ alt::g_heap_sort            0             40                    3       0.000003
+ fsu::g_heap_sort            0             37                    2       0.000002
+ cormen::g_heap_sort         0             37                    2       0.000002
+=================================================================================
+Numerical Sorts
+=================================================================================
+algorithm               errors     outer loop  size           usec            sec
+---------               ------     ----------  ----           ----            ---
+ counting_sort               0              -     -              2       0.000002
+ bit_sort                    0           bits     8              4       0.000004
+ bit_sort                    0           bits    16              9       0.000009
+ bit_sort                    0           bits    32             14       0.000014
+ bit_sort                    0           bits    64             33       0.000033
+ byte_sort                   0          bytes     1              7       0.000007
+ byte_sort                   0          bytes     2             11       0.000011
+ byte_sort                   0          bytes     4             28       0.000028
+ byte_sort                   0          bytes     8             60       0.000060
+ word_sort                   0          words     1           2767       0.002767
+ word_sort                   0          words     2           5145       0.005145
+ word_sort                   0          words     4          10125       0.010125
+
+ Total Time:                                                 19320       0.019320
+
+ Process complete
+
+ madden@linprog8.cs.fsu.edu:~/cop4531/proj2>sortspy.x out.txt log.txt
+
+ Input file name: out.txt
+            size: 100000
+
+=================================================================================
+Comparison Sorts
+=================================================================================
+ algorithm              errors     comp_count                 usec            sec
+ ---------------        ------     ----------                 ----            ---
+ g_selection_sort            0     5000050000             17591555      17.591555
+ g_insertion_sort            0     2222256667             11422322      11.422322
+ g_quick_sort                0      555941403              3969435       3.969435
+ g_quick_sort_opt            0      555941313              3969957       3.969957
+ g_quick_sort_3w             0         522129                 4013       0.004013
+ g_quick_sort_3w_opt         0         522129                 3980       0.003980
+ g_merge_sort                0        1473069                20404       0.020404
+ g_merge_sort_opt            0        1502791                15010       0.015010
+ g_merge_sort_bu             0        1507090                19130       0.019130
+ List::Sort                  0        1507090                26279       0.026279
+ alt::g_heap_sort            0        2747902                27554       0.027554
+ fsu::g_heap_sort            0        2731526                26465       0.026465
+ cormen::g_heap_sort         0        2731526                26679       0.026679
+=================================================================================
+Numerical Sorts
+=================================================================================
+algorithm               errors     outer loop  size           usec            sec
+---------               ------     ----------  ----           ----            ---
+ counting_sort               0              -     -           1391       0.001391
+ bit_sort                    0           bits     8           9572       0.009572
+ bit_sort                    0           bits    16          23336       0.023336
+ bit_sort                    0           bits    32          39501       0.039501
+ bit_sort                    0           bits    64          81829       0.081829
+ byte_sort                   0          bytes     1           1476       0.001476
+ byte_sort                   0          bytes     2           2798       0.002798
+ byte_sort                   0          bytes     4           5218       0.005218
+ byte_sort                   0          bytes     8          10239       0.010239
+ word_sort                   0          words     1           2807       0.002807
+ word_sort                   0          words     2           6105       0.006105
+ word_sort                   0          words     4           9969       0.009969
+
+ Total Time:                                              80990473      80.990473
+
+ Process complete
+
   REFERENCES: GeeksForGeeks.com, https://en.wikipedia.org/wiki/Linked_data_structure#General_disadvantages,
   https://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html
