@@ -23,3 +23,9 @@ but it seems to be working fine and shouldn't be necessary to rewrite what would
 
 06/12/2019 -  I feel pretty comfortable with my code and makefile now so it is time to focus more on analysis which will be provided
               below.
+
+
+Operational Objective 1:
+  Memory allocation plays a huge role in why we choose mergesort for linked list over other types of sorts that are faster/more
+  efficient with things like vectors or arrays. Linked list nodes are not necessarily adjacent in memory which means things like 
+  inserting something in the middle takes O(1) space and time which is great.
