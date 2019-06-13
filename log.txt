@@ -34,3 +34,10 @@ Operational Objective 2:
   we get O(n log n) because we have n items iterated through log n times. This is pretty clearly demonstrated in my code.
   
  Operation Objective 3:
+  Linked list data structures can be affected by OS memory paging because they are not contiguous and data can sometimes be found
+  all over memory. Most memory paging algorithms thrive on things Locality and because of what I just stated, Linked list have
+  the oppurtunity to have very poor locality of reference which makes it much harder and in turn slow for the memory paging 
+  algorithms.
+  
+  REFERENCES: GeeksForGeeks.com, https://en.wikipedia.org/wiki/Linked_data_structure#General_disadvantages,
+  https://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html
