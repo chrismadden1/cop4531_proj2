@@ -1,0 +1,25 @@
+06/05/2019 - copied over all of the necessary files into my project directory and finished looking over all the lecture notes
+             for week 3-4 including Sorts and Asymptotics to help familiarize myself with merge sort better.
+             
+06/06/2019 - analyzed given code to try to better understand what is going on in sortspy.cpp and how we are supposed to make use of
+              LessThanSpy<T> as I have not seen it in previous courses. 
+              
+06/07/2019 - I have now watched multiple videos and looked at existing algorithms on the internet for linked list bottom up merge sort 
+              from website like geeksforgeeks and stackoverflow and looked at the different recursive and non recursive implementations 
+              I now feel comfortable with starting the code.
+              
+06/09/2019 -  I now have a working(for the most part) version of void List<T>::Sort (P& comp) working and just need to clean up a few things
+              mainly the things specified in the project details under "loose ends to tie up" which I should be able to finish soon
+              
+06/11/2019 -  Finished tying up all the loose ends and began testing and analyzing my algorithm for operational objectives 2&3.
+              not completely sure about using 
+template < typename T >
+void List<T>::Sort ()
+{
+  fsu::LessThan<T> p;
+  Sort(p);
+}
+but it seems to be working fine and shouldn't be necessary to rewrite what would be very similar code here in this function.
+
+06/12/2019 -  I feel pretty comfortable with my code and makefile now so it is time to focus more on analysis which will be provided
+              below.
